@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart & Booking</title>
+  <link rel="stylesheet" href="style.css">
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+  <div class="logo">🌿 NS Caterers</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="cart.html">Cart</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="cart-page">
+  <h1>Your Cart 🛒</h1>
+
+  <ul id="cartItems"></ul>
+
+  <div class="booking-form">
+    <h2>Event Details</h2>
+
+    <input type="date" id="eventDate" required>
+    <input type="number" id="guests" placeholder="Number of Guests" required>
+    <input type="text" id="location" placeholder="Event Location" required>
+    <textarea id="notes" placeholder="Additional Requirements"></textarea>
+
+    <div class="cart-buttons">
+      <button onclick="clearCart()">Clear Cart</button>
+      <button onclick="sendOrder()">Send Inquiry</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 NS Caterers</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

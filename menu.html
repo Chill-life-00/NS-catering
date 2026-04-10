@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Traditional Menu</title>
+  <link rel="stylesheet" href="style.css">
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    .menu-category ul {
+      display: none;
+    }
+
+    .menu-category.active ul {
+      display: block;
+    }
+
+    .menu-category h2 {
+      cursor: pointer;
+      user-select: none;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 5px 0;
+    }
+
+    li button {
+      margin-left: 10px;
+      padding: 3px 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+<div id="toast" class="toast">Item added ✔</div>
+<header>
+  <div class="logo">🌿 NS Caterers</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="cart.html">Cart</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="menu">
+ <h1>Traditional Vegetarian Menu</h1>
+<br>
+<br>
+
+  <div class="menu-grid">
+
+    <!-- Welcome Drinks -->
+    <div class="menu-category">
+      <h2 onclick="toggleMenu(this)">🥤 Welcome Drinks</h2>
+      <ul>
+        <li>Panakam <button onclick="addToCart('Panakam')">Add</button></li>
+        <li>Neer Mor <button onclick="addToCart('Neer Mor')">Add</button></li>
+        <li>Tender Coconut Water <button onclick="addToCart('Tender Coconut Water')">Add</button></li>
+        <li>Lemon Jeera Sherbet <button onclick="addToCart('Lemon Jeera Sherbet')">Add</button></li>
+        <li>Aam Panna <button onclick="addToCart('Aam Panna')">Add</button></li>
+        <li>Rose Milk & Badam Milk <button onclick="addToCart('Rose Milk & Badam Milk')">Add</button></li>
+        <li>Kokum Cooler & Jaljeera <button onclick="addToCart('Kokum Cooler & Jaljeera')">Add</button></li>
+      </ul>
+    </div>
+
+    <!-- Starters -->
+    <div class="menu-category">
+      <h2 onclick="toggleMenu(this)">🍢 Starters / Snacks</h2>
+      <ul>
+        <li>Medu Vada, Masala Vada, Mini Idlis <button onclick="addToCart('Medu Vada, Masala Vada, Mini Idlis')">Add</button></li>
+        <li>Paniyaram (Sweet & Kara), Ulli Vada <button onclick="addToCart('Paniyaram (Sweet & Kara), Ulli Vada')">Add</button></li>
+        <li>Raw Banana Bajji, Veg Bonda, Samosa <button onclick="addToCart('Raw Banana Bajji, Veg Bonda, Samosa')">Add</button></li>
+        <li>Banana Chips, Murukku, Ribbon Pakoda <button onclick="addToCart('Banana Chips, Murukku, Ribbon Pakoda')">Add</button></li>
+        <li>Sabudana Vada, Vegetable Cutlets <button onclick="addToCart('Sabudana Vada, Vegetable Cutlets')">Add</button></li>
+      </ul>
+    </div>
+
+    <!-- Rice -->
+    <div class="menu-category">
+      <h2 onclick="toggleMenu(this)">🍚 Rice Varieties</h2>
+      <ul>
+        <li>Steamed Rice <button onclick="addToCart('Steamed Rice')">Add</button></li>
+        <li>Lemon Rice <button onclick="addToCart('Lemon Rice')">Add</button></li>
+        <li>Tamarind Rice (Puliyodarai) <button onclick="addToCart('Tamarind Rice')">Add</button></li>
+        <li>Coconut Rice <button onclick="addToCart('Coconut Rice')">Add</button></li>
+        <li>Bisibelebath <button onclick="addToCart('Bisibelebath')">Add</button></li>
+        <li>Mango Rice <button onclick="addToCart('Mango Rice')">Add</button></li>
+        <li>Curry Leaf Rice <button onclick="addToCart('Curry Leaf Rice')">Add</button></li>
+      </ul>
+    </div>
+
+    <!-- Curries -->
+    <div class="menu-category">
+      <h2 onclick="toggleMenu(this)">🍲 Gravies & Curries</h2>
+      <ul>
+        <li>Sambar Varieties <button onclick="addToCart('Sambar Varieties')">Add</button></li>
+        <li>Rasam Varieties <button onclick="addToCart('Rasam Varieties')">Add</button></li>
+        <li>More Kuzhambu, Kara Kuzhambu <button onclick="addToCart('More Kuzhambu, Kara Kuzhambu')">Add</button></li>
+        <li>Paruppu Urundai Kuzhambu <button onclick="addToCart('Paruppu Urundai Kuzhambu')">Add</button></li>
+        <li>Kalan (Kerala style) <button onclick="addToCart('Kalan')">Add</button></li>
+        <li>Avial, Kootu, Poriyal, Thoran <button onclick="addToCart('Avial, Kootu, Poriyal, Thoran')">Add</button></li>
+        <li>Vegetable Fry & Roasts <button onclick="addToCart('Vegetable Fry & Roasts')">Add</button></li>
+      </ul>
+    </div>
+
+    <!-- Accompaniments -->
+    <div class="menu-category">
+      <h2 onclick="toggleMenu(this)">🥗 Accompaniments</h2>
+      <ul>
+        <li>Thogayal / Chammanthi <button onclick="addToCart('Thogayal / Chammanthi')">Add</button></li>
+        <li>Pickles (Mango, Lemon, Garlic) <button onclick="addToCart('Pickles')">Add</button></li>
+        <li>Appalam & Banana Chips <button onclick="addToCart('Appalam & Banana Chips')">Add</button></li>
+        <li>Curd Rice, Buttermilk Rice <button onclick="addToCart('Curd Rice, Buttermilk Rice')">Add</button></li>
+        <li>Ghee Rice with Jeera <button onclick="addToCart('Ghee Rice with Jeera')">Add</button></li>
+      </ul>
+    </div>
+
+    <!-- Tiffin -->
+    <div class="menu-category">
+      <h2 onclick="toggleMenu(this)">🍽️ Live Counters / Tiffin</h2>
+      <ul>
+        <li>Ven Pongal with Gothsu <button onclick="addToCart('Ven Pongal with Gothsu')">Add</button></li>
+        <li>Idiyappam with Stew <button onclick="addToCart('Idiyappam with Stew')">Add</button></li>
+        <li>Poori with Kurma <button onclick="addToCart('Poori with Kurma')">Add</button></li>
+        <li>Mini Dosa / Uttapam <button onclick="addToCart('Mini Dosa / Uttapam')">Add</button></li>
+        <li>Set Dosa with Saagu <button onclick="addToCart('Set Dosa with Saagu')">Add</button></li>
+        <li>Pesarattu with Ginger Chutney <button onclick="addToCart('Pesarattu with Ginger Chutney')">Add</button></li>
+        <li>Mini Appam with Coconut Milk <button onclick="addToCart('Mini Appam with Coconut Milk')">Add</button></li>
+      </ul>
+    </div>
+
+    <!-- Salads -->
+    <div class="menu-category">
+      <h2 onclick="toggleMenu(this)">🥒 Salads & Raitas</h2>
+      <ul>
+        <li>Cucumber Pachadi <button onclick="addToCart('Cucumber Pachadi')">Add</button></li>
+        <li>Pineapple Raita <button onclick="addToCart('Pineapple Raita')">Add</button></li>
+        <li>Kosambari <button onclick="addToCart('Kosambari')">Add</button></li>
+        <li>Beetroot Raita <button onclick="addToCart('Beetroot Raita')">Add</button></li>
+        <li>Sprout Salad <button onclick="addToCart('Sprout Salad')">Add</button></li>
+      </ul>
+    </div>
+
+    <!-- Desserts -->
+    <div class="menu-category">
+      <h2 onclick="toggleMenu(this)">🍮 Desserts & Sweets</h2>
+      <ul>
+        <li>Payasam Varieties <button onclick="addToCart('Payasam Varieties')">Add</button></li>
+        <li>Ada Pradhaman <button onclick="addToCart('Ada Pradhaman')">Add</button></li>
+        <li>Elaneer Payasam <button onclick="addToCart('Elaneer Payasam')">Add</button></li>
+        <li>Mysore Pak <button onclick="addToCart('Mysore Pak')">Add</button></li>
+        <li>Bobbatlu / Poli <button onclick="addToCart('Bobbatlu / Poli')">Add</button></li>
+        <li>Badusha, Jangiri <button onclick="addToCart('Badusha, Jangiri')">Add</button></li>
+        <li>Paal Kozhukattai <button onclick="addToCart('Paal Kozhukattai')">Add</button></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- FLOATING CART -->
+<div class="cart-icon" onclick="goToCart()">
+  🛒 <span id="cartCount">0</span>
+</div>
+
+<footer>
+  <p>© 2026 NS Caterers | Traditional Banana Leaf Catering</p>
+</footer>
+
+<script>
+  function toggleMenu(el) {
+    el.parentElement.classList.toggle("active");
+  }
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
